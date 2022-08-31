@@ -13,25 +13,38 @@ export class SearchBar extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.onSearchSubmit(this.state.term);
+    this.setState({ term: "" });
   };
-
-  //   AIzaSyBV21UjHnucHGp_mzFDyjcbY4Yr4gpho6E;
 
   render() {
     return (
-      <div className="search-bar ui segment">
+      <div
+        className="search-bar ui segment"
+        style={{ backgroundColor: "#ffebee", padding: "1rem" }}
+      >
         <form
           className="ui form"
           onSubmit={this.handleSubmit}
           autoComplete="off"
         >
           <div className="field">
-            <label>Video Search</label>
+            <label
+              className="label"
+              style={{
+                textTransform: "capitalize",
+                fontSize: "15px",
+                color: "darkblue",
+              }}
+            >
+              Welcome to the Video Search App
+            </label>
             <input
+              className="in"
               type="text"
               name="search"
               value={this.state.term}
               onChange={this.handleChange}
+              placeholder="Search here..."
             />
           </div>
         </form>
