@@ -44,7 +44,7 @@ export class SearchBar extends Component {
               name="search"
               value={this.state.term}
               onChange={this.handleChange}
-              placeholder="Search here..."
+              placeholder="Search here in this input..."
             />
           </div>
         </form>
