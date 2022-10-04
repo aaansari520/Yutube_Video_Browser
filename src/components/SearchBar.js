@@ -36,7 +36,7 @@ export class SearchBar extends Component {
                 color: "darkblue",
               }}
             >
-              Welcome to the Video Search App
+              Welcome to the Video Search App made by Anwar
             </label>
             <input
               className="in"
